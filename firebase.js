@@ -1,11 +1,12 @@
 const admin = require('firebase-admin');
 
-// ⚠️ Nome do arquivo JSON exato que você baixou
-const serviceAccount = require('./zapfunilia-firebase-adminsdk-fbsvc-c9868ac590.json');
+// Lê o JSON do Firebase da variável de ambiente
+const serviceAccount = JSON.parse(process.env.FIREBASE_CREDENTIALS);
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
 
 const db = admin.firestore();
+
 module.exports = db;
