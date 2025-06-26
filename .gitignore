@@ -1,0 +1,7 @@
+node_modules/
+.wwebjs_auth/
+.env
+*.log
+*.pdf
+*.mp4
+*.json
